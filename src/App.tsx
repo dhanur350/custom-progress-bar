@@ -1,11 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
+import { ProgressBar } from './components';
 
 function App() {
   return (
     <div className="App">
-      
+      <ProgressBar pillShape/>
     </div>
   );
 }

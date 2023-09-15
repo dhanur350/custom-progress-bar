@@ -3,14 +3,24 @@ import classNames from 'classnames';
 import './ProgressBar.scss';
 
 interface Props {
+  label?: string;
   progress?: number;
   status?: string;
   size?: "mini" | "tiny" | "small" | "big" | "large";
   colorClass?: string;
+  pillShape?: boolean;
 }
 
 
-function ProgressBar() {
+function ProgressBar(props: Props) {
+  const {
+    label,
+    status, 
+    size, 
+    colorClass, 
+    pillShape
+  } = props;
+  
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {
@@ -28,8 +38,11 @@ function ProgressBar() {
   }, [progress]);
 
   return (
-    <div>
-      <div className="progress-container">
+    <div className="custom-progressBar">
+      <span>{label}</span>
+      <div className={classNames(["progress-container", size], {
+        "progress-container-pill-shape": pillShape
+      })}>
         <div className="progress-bar" style={{ width: `${progress}%` }}>
           {`${progress}%`}
         </div>
