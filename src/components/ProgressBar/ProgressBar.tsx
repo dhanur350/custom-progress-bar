@@ -4,6 +4,7 @@ import './ProgressBar.scss';
 
 interface Props {
   label?: string;
+  labelClassname?: string;
   progress?: number;
   status?: string;
   size?: "mini" | "tiny" | "small" | "big" | "large";
@@ -15,12 +16,13 @@ interface Props {
 function ProgressBar(props: Props) {
   const {
     label,
+    labelClassname,
     status, 
     size, 
     colorClass, 
     pillShape
   } = props;
-  
+
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {

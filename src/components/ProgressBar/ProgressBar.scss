@@ -1,41 +1,44 @@
-.tiny {
-  height: 4px;
-}
-
-.mini {
-  height: 8px;
-}
-
-.small {
-  height: 12px;
-}
-
-.big {
-  height: 16px;
-}
-
-.large {
-  height: 20px;
-}
-
-.progress-container {
+.custom-progressBar {
   width: 100%;
-  background-color: #ccc;
- 
-  .progress-bar {
-    width: 0;
-    height: 30px;
-    background-color: #4caf50;
-    text-align: center;
-    line-height: 30px;
-    color: white;
+  .tiny {
+    height: 4px;
   }
 
-  &-pill-shape {
-    border-radius: 1rem;
+  .mini {
+    height: 8px;
+  }
+
+  .small {
+    height: 12px;
+  }
+
+  .big {
+    height: 16px;
+  }
+
+  .large {
+    height: 20px;
+  }
+
+  .progress-container {
+    width: 100%;
+    background-color: #ccc;
 
     .progress-bar {
+      width: 0;
+      height: 30px;
+      background-color: #4caf50;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+    }
+
+    &-pill-shape {
       border-radius: 1rem;
+
+      .progress-bar {
+        border-radius: 1rem;
+      }
     }
   }
 }

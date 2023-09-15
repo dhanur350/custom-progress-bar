@@ -4,7 +4,7 @@ import { ProgressBar } from './components';
 function App() {
   return (
     <div className="App">
-      <ProgressBar pillShape/>
+      <ProgressBar pillShape label='Progressbar'/>
     </div>
   );
 }
