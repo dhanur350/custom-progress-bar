@@ -17,27 +17,27 @@ function ProgressBar(props: Props) {
   const {
     label,
     labelClassname,
-    status, 
-    size, 
-    colorClass, 
+    status,
+    size,
+    colorClass,
     pillShape
   } = props;
 
-  const [progress, setProgress] = useState<number>(0);
+  const [progress, setProgress] = useState<number>(14);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (progress < 100) {
-        setProgress((prevProgress) => prevProgress + 1);
-      } else {
-        clearInterval(interval);
-      }
-    }, 100); 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (progress < 100) {
+  //       setProgress((prevProgress) => prevProgress + 1);
+  //     } else {
+  //       clearInterval(interval);
+  //     }
+  //   }, 100); 
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [progress]);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, [progress]);
 
   return (
     <div className="custom-progressBar">

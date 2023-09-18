@@ -1,5 +1,6 @@
 .custom-progressBar {
   width: 100%;
+
   .tiny {
     height: 4px;
   }
@@ -23,6 +24,7 @@
   .progress-container {
     width: 100%;
     background-color: #ccc;
+    transition: width .2s ease, background-color .1s ease;
 
     .progress-bar {
       width: 0;
@@ -31,6 +33,7 @@
       text-align: center;
       line-height: 30px;
       color: white;
+      transition: width .2s ease, background-color .1s ease;
     }
 
     &-pill-shape {
