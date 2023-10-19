@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import classNames from 'classnames';
 import './ProgressBar.scss';
+import { Progress } from "semantic-ui-react";
 
 interface Props {
   label?: string;
@@ -15,8 +16,6 @@ interface Props {
 
 function ProgressBar(props: Props) {
   const {
-    label,
-    labelClassname,
     status,
     size,
     colorClass,
@@ -25,30 +24,10 @@ function ProgressBar(props: Props) {
 
   const [progress, setProgress] = useState<number>(14);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     if (progress < 100) {
-  //       setProgress((prevProgress) => prevProgress + 1);
-  //     } else {
-  //       clearInterval(interval);
-  //     }
-  //   }, 100); 
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [progress]);
-
   return (
     <div className="custom-progressBar">
-      <span>{label}</span>
-      <div className={classNames(["progress-container", size], {
-        "progress-container-pill-shape": pillShape
-      })}>
-        <div className="progress-bar" style={{ width: `${progress}%` }}>
-          {`${progress}%`}
-        </div>
-      </div>
+      <Progress percent={progress}/>
+      <div className={classNames([])}></div>
     </div>
   );
 }
