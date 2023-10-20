@@ -6,6 +6,8 @@ function App() {
     <div className="App">
       <ProgressBar 
         pillShape 
+        isPrompted
+        size='tiny'
       />
     </div>
   );

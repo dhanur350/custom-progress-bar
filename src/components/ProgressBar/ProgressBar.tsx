@@ -27,7 +27,9 @@ function ProgressBar(props: Props) {
   const [progress, setProgress] = useState<number>(14);
 
   return (
-    <div className={classNames(["custom-progressBar"])}>
+    <div className={classNames(["custom-progressBar"],{
+      
+    })}>
       <Progress percent={progress}/>
       <div className="alert-progress"></div>
     </div>
