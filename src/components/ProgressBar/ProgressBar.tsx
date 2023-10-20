@@ -11,6 +11,7 @@ interface Props {
   size?: "mini" | "tiny" | "small" | "big" | "large";
   colorClass?: string;
   pillShape?: boolean;
+  isPrompted?: boolean;
 }
 
 
@@ -19,15 +20,16 @@ function ProgressBar(props: Props) {
     status,
     size,
     colorClass,
-    pillShape
+    pillShape,
+    isPrompted
   } = props;
 
   const [progress, setProgress] = useState<number>(14);
 
   return (
-    <div className="custom-progressBar">
+    <div className={classNames(["custom-progressBar"])}>
       <Progress percent={progress}/>
-      <div className={classNames([])}></div>
+      <div className="alert-progress"></div>
     </div>
   );
 }
