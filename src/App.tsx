@@ -7,7 +7,7 @@ function App() {
       <ProgressBar 
         pillShape 
         isPrompted
-        size='tiny'
+        // size='tiny'
       />
     </div>
   );

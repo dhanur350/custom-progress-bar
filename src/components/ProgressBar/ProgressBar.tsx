@@ -8,7 +8,7 @@ interface Props {
   labelClassname?: string;
   progress?: number;
   status?: string;
-  size?: "mini" | "tiny" | "small" | "big" | "large";
+  size?: any;
   colorClass?: string;
   pillShape?: boolean;
   isPrompted?: boolean;
@@ -28,9 +28,9 @@ function ProgressBar(props: Props) {
 
   return (
     <div className={classNames(["custom-progressBar"],{
-      
+      "pill-shape": pillShape
     })}>
-      <Progress percent={progress}/>
+      <Progress className="progress-bar" percent={progress} size={size}/>
       <div className="alert-progress"></div>
     </div>
   );

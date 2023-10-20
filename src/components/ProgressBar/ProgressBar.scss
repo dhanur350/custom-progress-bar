@@ -1,29 +1,25 @@
 .custom-progressBar {
   width: 100%;
-
-  
+  background-color: none;
+  background: none;
 
   .progress-container {
-    width: 100%;
-    background-color: #ccc;
-    transition: width .2s ease, background-color .1s ease;
 
     .progress-bar {
-      width: 0;
-      height: 30px;
-      background-color: #4caf50;
-      text-align: center;
-      line-height: 30px;
-      color: white;
-      transition: width .2s ease, background-color .1s ease;
+      background: none;
+
     }
+  }
+}
 
-    &-pill-shape {
-      border-radius: 1rem;
+.pill-shape {
+  border-radius: 1rem;
 
-      .progress-bar {
-        border-radius: 1rem;
-      }
+  .progress-bar {
+    border-radius: 1rem !important;
+
+    .bar {
+      border-radius: 1rem !important;
     }
   }
 }
