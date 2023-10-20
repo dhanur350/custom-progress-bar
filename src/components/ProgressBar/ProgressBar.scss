@@ -1,7 +1,7 @@
 .custom-progressBar {
+  display: flex;
   width: 100%;
   background: whitesmoke;
-  position: relative;
 
   .progress-bar {
     background: none !important;
@@ -13,9 +13,8 @@
     width: 10%;
     background-color: red;
     font-size: 1rem;
-    position: absolute;
-    top: 0;
-    z-index: -1;
+    border-radius: 1rem;
+    margin-left: -20px;
     height: 24px;
   }
 }

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import classNames from 'classnames';
 import './ProgressBar.scss';
-import { Progress } from "semantic-ui-react";
+import { Popup, Progress } from "semantic-ui-react";
 
 interface Props {
   label?: string;
@@ -25,13 +25,29 @@ function ProgressBar(props: Props) {
   } = props;
 
   const [progress, setProgress] = useState<number>(14);
+  const ref = useRef<any>(null);
+
+  useEffect(() => {
+
+  }, [])
+
+  console.log(ref.current?.clientWidth);
+
 
   return (
-    <div className={classNames(["custom-progressBar"],{
+    <div className={classNames(["custom-progressBar"], {
       "pill-shape": pillShape
     })}>
-      <Progress className="progress-bar" percent={progress} size={size}/>
-      <div className="alert-progress"></div>
+      <div style={{width: "100%"}}>
+        <Progress className="progress-bar" percent={100} size={size} />
+      </div>
+      <Popup 
+      content="this stage is delayed"
+      position="top center"
+      trigger={
+        <div className="alert-progress"></div>
+      }
+      />
     </div>
   );
 }
