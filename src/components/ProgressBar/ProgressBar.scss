@@ -1,14 +1,22 @@
 .custom-progressBar {
   width: 100%;
-  background-color: none;
-  background: none;
+  background: whitesmoke;
+  position: relative;
 
-  .progress-container {
+  .progress-bar {
+    background: none !important;
+    margin: 0 !important;
+    z-index: 1;
+  }
 
-    .progress-bar {
-      background: none;
-
-    }
+  .alert-progress {
+    width: 10%;
+    background-color: red;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 24px;
   }
 }
 
